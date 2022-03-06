@@ -309,7 +309,7 @@ getEntries();
 							> {timeSlot.name}</button>
 					</td>
 				{/each}
-				<td><button class = "btn" on:click={() => addTimeSlot("Monday")} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
+				<td><button class = "btn" on:click={() => addTimeSlot('Monday')} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
 			</tr>
 			<tr>
 				<th scope="row">Tuesday</th>
@@ -328,7 +328,7 @@ getEntries();
 						<button type="button" class="btn" on:click={() =>	showCurData('Wednesday', index, timeSlot.name, timeSlot.period, timeSlot.style)}> {timeSlot.name}</button>
 					</td>
 				{/each}
-				<td><button class = "btn" on:click={() => addTimeSlot("Wednesday")} data-bs-toggle="modal" data-bs-target = "#exampleModal" >+</button></td>
+				<td><button class = "btn" on:click={() => addTimeSlot('Wednesday')} data-bs-toggle="modal" data-bs-target = "#exampleModal" >+</button></td>
 			</tr>
 			<tr>
 				<th scope="row">Thursday</th>
@@ -337,7 +337,7 @@ getEntries();
 						<button type="button" class="btn" on:click={() =>	showCurData('Thursday', index, timeSlot.name, timeSlot.period, timeSlot.style)}> {timeSlot.name}</button>
 					</td>
 				{/each}
-				<td><button class = "btn" on:click={() => addTimeSlot("Thursday")} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
+				<td><button class = "btn" on:click={() => addTimeSlot('Thursday')} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
 			</tr>
 			<tr>
 				<th scope="row">Friday</th>
@@ -346,7 +346,7 @@ getEntries();
 						<button type="button" class="btn" on:click={() =>	showCurData('Friday', index, timeSlot.name, timeSlot.period, timeSlot.style)}> {timeSlot.name}</button>
 					</td>
 				{/each}
-				<td><button class = "btn" on:click={() => addTimeSlot("Friday")} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
+				<td><button class = "btn" on:click={() => addTimeSlot('Friday')} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
 			</tr>
 		</tbody>
 	</table>
