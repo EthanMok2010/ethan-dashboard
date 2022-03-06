@@ -315,17 +315,17 @@ getEntries();
 				<th scope="row">Tuesday</th>
 				{#each timetable.Tuesday as timeSlot,index}
 					<td colspan={timeSlot.period} class={timeSlot.style}>
-						<button type="button" class="btn" on:click={() =>	showCurData('Monday', index, timeSlot.name, timeSlot.period, timeSlot.style)}
+						<button type="button" class="btn" on:click={() =>	showCurData('Tuesday', index, timeSlot.name, timeSlot.period, timeSlot.style)}
 							> {timeSlot.name}</button>
 					</td>
 				{/each}
-				<td><button class = "btn" on:click={() => addTimeSlot("Tuesday")} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
+				<td><button class = "btn" on:click={() => addTimeSlot('Tuesday')} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
 			</tr>
 			<tr>
 				<th scope="row">Wednesday</th>
 				{#each timetable.Wednesday as timeSlot,index}
 					<td colspan={timeSlot.period} class={timeSlot.style}>
-						<button type="button" class="btn"> {timeSlot.name}</button>
+						<button type="button" class="btn" on:click={() =>	showCurData('Wednesday', index, timeSlot.name, timeSlot.period, timeSlot.style)}> {timeSlot.name}</button>
 					</td>
 				{/each}
 				<td><button class = "btn" on:click={() => addTimeSlot("Wednesday")} data-bs-toggle="modal" data-bs-target = "#exampleModal" >+</button></td>
@@ -334,7 +334,7 @@ getEntries();
 				<th scope="row">Thursday</th>
 				{#each timetable.Thursday as timeSlot,index}
 					<td colspan={timeSlot.period} class={timeSlot.style}>
-						<button type="button" class="btn"> {timeSlot.name}</button>
+						<button type="button" class="btn" on:click={() =>	showCurData('Thursday', index, timeSlot.name, timeSlot.period, timeSlot.style)}> {timeSlot.name}</button>
 					</td>
 				{/each}
 				<td><button class = "btn" on:click={() => addTimeSlot("Thursday")} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
@@ -343,7 +343,7 @@ getEntries();
 				<th scope="row">Friday</th>
 				{#each timetable.Friday as timeSlot,index}
 					<td colspan={timeSlot.period} class={timeSlot.style}>
-						<button type="button" class="btn"> {timeSlot.name}</button>
+						<button type="button" class="btn" on:click={() =>	showCurData('Friday', index, timeSlot.name, timeSlot.period, timeSlot.style)}> {timeSlot.name}</button>
 					</td>
 				{/each}
 				<td><button class = "btn" on:click={() => addTimeSlot("Friday")} data-bs-toggle="modal" data-bs-target = "#exampleModal">+</button></td>
