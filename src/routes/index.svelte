@@ -196,6 +196,7 @@ timetable = timetable;
 	timetable.Friday.splice(index,1);
 	timetable = timetable;
 }
+saveEntry()
 }
 
 function setTimeSlot(day,index,newName,newPeriod,newStyle){
@@ -220,6 +221,7 @@ function setTimeSlot(day,index,newName,newPeriod,newStyle){
 			timetable.Friday[index].period = newPeriod;
 			timetable.Friday[index].style = newStyle;
 } 
+saveEntry()
 }
 	function showCurData(day,index,name,period,style){
 		curDay = day
@@ -251,6 +253,19 @@ function setTimeSlot(day,index,newName,newPeriod,newStyle){
 
 		if (error) alert(error.message); // alert if error
 	}
+	
+// Upsert entry
+async function saveEntry() {
+  const { error } = await supabase.from("studentEntries").upsert(
+    {
+      user_id: supabase.auth.user().id,
+      timetable: timetable,
+    },
+    { onConflict: "user_id" }
+  );
+  if (error) alert(error.message);
+}
+
 </script>
 
 <div class="container">
