@@ -266,6 +266,18 @@ async function saveEntry() {
   if (error) alert(error.message);
 }
 
+// Get entries
+async function getEntries() {
+  const { data, error } = await supabase.from("studentEntries").select();
+  if (error) alert(error.message);
+
+  if (data != "") {
+    timetable = data[0].timetable;
+  }
+}
+
+getEntries();
+
 </script>
 
 <div class="container">
